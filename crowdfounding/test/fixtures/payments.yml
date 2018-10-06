@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  code: MyString
+  value: 1.5
+  status: MyString
+  order: one
+
+two:
+  type: 
+  code: MyString
+  value: 1.5
+  status: MyString
+  order: two

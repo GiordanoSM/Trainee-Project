@@ -1,0 +1,64 @@
+COMPONENTES: (OBS: ** significa que é um atributo obrigatorio)
+
+User
+  - name (string) **
+	- last_name (string) **
+	- email (string) **
+	- password (string) **
+	- birthdate (string)
+
+Adress
+	- postal_code (string)
+	- country (string)
+	- state (string)
+	- city (string)
+
+Product
+	- title (string) **
+	- type (string) (opções: flexible, all_or_nothing) **
+	- category (string) (opções: design_tech, publishing, games, food_craft, music, comics_illustration, film, arts) **
+	- final_date (string) **
+	- min_value (float)
+	- max_value (float)
+	- tax (float)
+	- qnt_raised (float)
+	- goal (float) **
+
+Order
+
+Payment
+	- type (string) (opções: card, bill_exchange)
+	- code (string)
+	- value (float)
+	- status (string) (opções: wainting, confirmed, canceled, refunded)
+
+Card
+	- name (string)
+	- expire-date (string)
+	- number (linteger)
+
+RELAÇÕES:
+
+User 
+	- tem um adress
+	- tem varias orders
+	- tem varios products
+
+Adress
+	- pertence a um user
+
+Product
+	- pertence a um user
+	- tem varias orders
+
+Order
+	- pertence a um user
+	- pertence a um product
+	- tem um payment
+
+Payment
+	- pertence a uma order
+	- tem um card
+
+Card
+	- pertence a um payment
